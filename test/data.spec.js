@@ -100,4 +100,3 @@ describe('data', ()=>{
   });
 
 });
->>>>>>> ef1c6c6af39a54f0c963cd981acbc22b3124d90f
