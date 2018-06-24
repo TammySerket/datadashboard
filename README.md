@@ -1,4 +1,4 @@
-#Data Dashboard
+##Data Dashboard
 
 El siguiente proyecto, Data Dashboard, se tenía como objetivo principal y único, resolver una problemática actual, que era diseñar y crear una interfaz en la cual los usuarios ( en este caso las TM de Laboratoria) pudiesen acceder a una base de datos. Base de datos que corresponderia a cada una de las alumnas de Laboratoria, tanto actuales como egresadas y acceder a su progreso. 
 Por lo tanto la interfaz deberia poder rescatar dicha informacion con una determinada clase de filtros y ciertos ordenamientos para facilitar su búsqueda.
