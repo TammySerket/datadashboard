@@ -22,7 +22,6 @@ inputChange = (cohorts) => {
     option.innerText = curso;
     cohortList.appendChild(option)
     
-};
 // Escuchar eventos del dom y llamar la funcion cada vez que se cambie el filtro
 document.getElementById('cursos').addEventListener('change', async function () {
     const e = document.getElementById("cursos");
@@ -35,7 +34,7 @@ document.getElementById('cursos').addEventListener('change', async function () {
     poblarTabla(computeUsersStats(alumnas, progreso, cohorts));
 });
 
-
+}
 async function poblarTabla(users) {
     document.getElementById('students').innerText = '';
 
