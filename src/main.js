@@ -12,6 +12,7 @@ async function requiereCohorts() {
     }
     inputChange(cohorts);
 }
+
 inputChange = (cohorts) => {
     const cohortList = document.getElementById('cursos');
     const cohortsId = cohorts.filter(element => {
@@ -73,31 +74,34 @@ async function poblarTabla(users) {
         newElement.classList.add('center');
         newElement.classList.add('col-2');
         parent.appendChild(newElement);
+
+       //Funcion para filtrar alumnas y su información correspondiente
+       filtrarAlumnas = (users) => {
+        const alumnas = document.getElementById('filtroAlumnas');
+        const listaAlumnas = users.filter(element => {
+            return element.id === document.getElementById('filtroAlumnas').value;
+        })
+        const alumna = listaAlumnas[0].id;
+        const option = document.createElement('option');
+        option.innerText = alumna;
+        alumnas.appendChild(option)
+         
+      }
+        
     }
     completitudTotalSum += completitudTotalUser;
     percentLecturasSum += users[i].stats.reads.percent;
     percentQuizzSum += users[i].stats.quizzes.percent;
     percentExercisesSum += users[i].stats.exercises.percent;
-
 }
 
 function mostrar(id) {
-    if (id == 'bg') {
+    if (id == "bg") {
         document.getElementById("bg").style.display = "block";
         document.getElementById("bg2").style.display = "none";
-        document.getElementById("filtro").style.display = "none";
     } else if (id == "bg2") {
         document.getElementById("bg").style.display = "none";
         document.getElementById("bg2").style.display = "block";
-        document.getElementById("filtro").style.display = "block";
-    } else if (id == "filtro") {
-        document.getElementById("bg").style.display = "none";
-        document.getElementById("bg2").style.display = "block";
-        document.getElementById("filtro").style.display = "block";
     }
 }
 
-//Funcion para filtrar alumnas y su información correspondiente
-function filtrarAlumnas() {
-
-}
