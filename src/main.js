@@ -35,6 +35,7 @@ document.getElementById('cursos').addEventListener('change', async function () {
 });
 
 }
+
 async function poblarTabla(users) {
     document.getElementById('students').innerText = '';
 
@@ -79,12 +80,24 @@ async function poblarTabla(users) {
     percentExercisesSum += users[i].stats.exercises.percent;
 
 }
+
 function mostrar(id) {
     if (id == 'bg') {
-        document.getElementById('bg').style.display = "block";
-        document.getElementById('bg2').style.display = "none";
-    } else if (id == 'bg2') {
-        document.getElementById('bg').style.display = "none";
-        document.getElementById('bg2').style.display = "block";
+        document.getElementById("bg").style.display = "block";
+        document.getElementById("bg2").style.display = "none";
+        document.getElementById("filtro").style.display = "none";
+    } else if (id == "bg2") {
+        document.getElementById("bg").style.display = "none";
+        document.getElementById("bg2").style.display = "block";
+        document.getElementById("filtro").style.display = "block";
+    } else if (id == "filtro") {
+        document.getElementById("bg").style.display = "none";
+        document.getElementById("bg2").style.display = "block";
+        document.getElementById("filtro").style.display = "block";
     }
+}
+
+//Funcion para filtrar alumnas y su información correspondiente
+function filtrarAlumnas() {
+
 }
