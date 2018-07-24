@@ -74,13 +74,13 @@ async function poblarTabla(users) {
         newElement.classList.add('center');
         newElement.classList.add('col-2');
         parent.appendChild(newElement);
-
+    }
     completitudTotalSum += completitudTotalUser;
     percentLecturasSum += users[i].stats.reads.percent;
     percentQuizzSum += users[i].stats.quizzes.percent;
     percentExercisesSum += users[i].stats.exercises.percent;
-   }
-   filtrarAlumnas(users);
+   
+    filtrarAlumnas(users);
 }
 
 function mostrar(id) {
@@ -94,11 +94,11 @@ function mostrar(id) {
 }
 
 //Funcion para filtrar alumnas y su información correspondiente
-/*filtrarAlumnas = (users) => {
+filtrarAlumnas = (users) => {
     const btnBuscar = document.getElementById("buscar");  
     const listaAlumnas = users.filter(element => {
         return element.id === document.getElementById('filtroAlumnas').value;
-    })
+    });
     const nombres = listaAlumnas[0].name;
     const buscar = nombres.includes(btnBuscar.addEventListener("click"));
      console.log(buscar);
@@ -119,5 +119,5 @@ function mostrar(id) {
     const option = document.createElement('option');
     option.innerText = alumna;
     alumnas.appendChild(option)
-  }
-} */
+  }*/
+} 
