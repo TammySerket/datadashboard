@@ -75,24 +75,12 @@ async function poblarTabla(users) {
         newElement.classList.add('col-2');
         parent.appendChild(newElement);
 
-       //Funcion para filtrar alumnas y su información correspondiente
-       filtrarAlumnas = (users) => {
-        const alumnas = document.getElementById('filtroAlumnas');
-        const listaAlumnas = users.filter(element => {
-            return element.id === document.getElementById('filtroAlumnas').value;
-        })
-        const alumna = listaAlumnas[0].id;
-        const option = document.createElement('option');
-        option.innerText = alumna;
-        alumnas.appendChild(option)
-         
-      }
-        
-    }
     completitudTotalSum += completitudTotalUser;
     percentLecturasSum += users[i].stats.reads.percent;
     percentQuizzSum += users[i].stats.quizzes.percent;
     percentExercisesSum += users[i].stats.exercises.percent;
+   }
+   filtrarAlumnas(users);
 }
 
 function mostrar(id) {
@@ -102,6 +90,34 @@ function mostrar(id) {
     } else if (id == "bg2") {
         document.getElementById("bg").style.display = "none";
         document.getElementById("bg2").style.display = "block";
-    }
+    };
 }
 
+//Funcion para filtrar alumnas y su información correspondiente
+/*filtrarAlumnas = (users) => {
+    const btnBuscar = document.getElementById("buscar");  
+    const listaAlumnas = users.filter(element => {
+        return element.id === document.getElementById('filtroAlumnas').value;
+    })
+    const nombres = listaAlumnas[0].name;
+    const buscar = nombres.includes(btnBuscar.addEventListener("click"));
+     console.log(buscar);
+    /*btnBuscar.addEventListener("click", () => {
+        (element => {
+            return element.name === document.getElementById("filtroAlumnas").value;
+        });
+             console.log(listaAlumnas);      
+    })
+    
+    const buscarAlumna = listaAlumnas.search();
+    console.log(buscarAlumna);
+    const alumnas = document.getElementById('filtroAlumnas');
+    const listaAlumnas = users.filter(element => {
+        return element.id === document.getElementById('filtroAlumnas').value;
+    })
+    const alumna = listaAlumnas[0].id;
+    const option = document.createElement('option');
+    option.innerText = alumna;
+    alumnas.appendChild(option)
+  }
+} */
